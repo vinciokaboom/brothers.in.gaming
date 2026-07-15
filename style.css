@@ -200,6 +200,56 @@ main, .content {
 .post-gallery img { width: 100%; height: 100%; object-fit: cover; border-radius: 6px; }
 @media (max-width: 560px) { .post-gallery { grid-template-columns: 1fr; } }
 
+/* Data tables */
+.post-table-wrap { margin: 32px 0; overflow-x: auto; }
+.post-table {
+  border-collapse: collapse;
+  width: 100%;
+  font-size: 15px;
+  line-height: 1.45;
+}
+.post-table th,
+.post-table td {
+  border: 1px solid var(--border);
+  padding: 10px 14px;
+  text-align: left;
+  vertical-align: top;
+}
+.post-table thead th {
+  background: var(--accent);
+  color: #fff;
+  font-family: var(--font-head);
+  font-weight: 700;
+  font-size: 13px;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+.post-table tbody th {
+  background: var(--bg-alt);
+  color: var(--accent);
+  font-weight: 700;
+  text-align: center;
+  width: 1%;
+  white-space: nowrap;
+}
+.post-table td.rel {
+  color: var(--muted);
+  font-style: italic;
+  text-align: center;
+  white-space: nowrap;
+}
+.post-table tbody tr:nth-child(even) td { background: var(--bg-alt); }
+
+.sr-only {
+  position: absolute;
+  width: 1px; height: 1px;
+  padding: 0; margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
 /* Nested table-of-contents sub-lists */
 .post-toc ol ol { margin: 6px 0 2px; padding-left: 1.2em; list-style: lower-alpha; }
 .post-toc ol ol a { color: var(--muted); }
