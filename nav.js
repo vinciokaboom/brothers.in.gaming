@@ -20,7 +20,7 @@
 
   function buildNav() {
     return `
-      <a href="/" class="nav-logo">Brothers in Gaming</a>
+      <a href="/" class="nav-logo" aria-label="Brothers in Gaming — home"><img src="/Assets/logo.png" alt="Brothers in Gaming" /></a>
       <ul class="nav-links">
         ${buildNavLinks()}
       </ul>
