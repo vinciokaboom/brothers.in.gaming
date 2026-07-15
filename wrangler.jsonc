@@ -1,0 +1,24 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "brothers-in-gaming",
+  "main": "worker/index.js",
+  "compatibility_date": "2026-07-14",
+  "compatibility_flags": ["nodejs_compat"],
+  "observability": { "enabled": true },
+  "assets": {
+    "directory": ".",
+    "binding": "ASSETS"
+  }
+
+  // Analytics is disabled for now so the site deploys with zero setup.
+  // To enable it later: create the D1 database (see ANALYTICS-SETUP.md),
+  // then uncomment the block below and paste in your real database_id.
+  //
+  // "d1_databases": [
+  //   {
+  //     "binding": "DB",
+  //     "database_name": "brothers_analytics",
+  //     "database_id": "REPLACE_WITH_DATABASE_ID"
+  //   }
+  // ]
+}

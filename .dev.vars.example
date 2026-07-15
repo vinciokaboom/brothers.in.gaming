@@ -1,0 +1,8 @@
+# Copy this file to ".dev.vars" for local `wrangler dev`.
+# In production these are set as Worker secrets (see ANALYTICS-SETUP.md), NOT here.
+
+# Long random string that salts the anonymous visitor hash.
+SALT_SECRET="change-me-to-a-long-random-string"
+
+# Secret that gates /stats and /export. Treat it like a password.
+DASH_TOKEN="change-me-to-a-long-random-token"

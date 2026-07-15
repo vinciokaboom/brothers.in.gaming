@@ -1,0 +1,34 @@
+# Git internals — never deploy these as static assets
+.git
+.git/**
+
+# Wrangler local cache/build artifacts
+.wrangler
+.wrangler/**
+
+# Common OS/editor cruft, just in case
+.DS_Store
+Thumbs.db
+*.log
+
+# Analytics app source & config — must NOT be served as public assets
+node_modules
+node_modules/**
+worker
+worker/**
+wrangler.jsonc
+package.json
+package-lock.json
+schema.sql
+.gitignore
+.dev.vars
+.dev.vars.example
+ANALYTICS-SETUP.md
+MIGRATION-PLAN.md
+
+# Blog-post template (not a real page)
+post/_template.html
+
+# Original full-res image downloads — never deploy these
+Assets/**/raw/
+Assets/**/raw/**

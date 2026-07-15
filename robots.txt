@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+
+# Keep the private analytics endpoints out of the index.
+Disallow: /stats
+Disallow: /export
+
+Sitemap: https://www.brothers-in-gaming.com/sitemap.xml

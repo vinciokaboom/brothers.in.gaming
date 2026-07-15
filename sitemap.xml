@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Brothers in Gaming sitemap. URLs match the existing Wix paths exactly.
+  <lastmod> = each post's published date (from the original Wix schema).
+-->
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url><loc>https://www.brothers-in-gaming.com/</loc><lastmod>2026-02-23</lastmod></url>
+  <url><loc>https://www.brothers-in-gaming.com/about-us</loc></url>
+
+  <url><loc>https://www.brothers-in-gaming.com/post/designed-for-two</loc><lastmod>2026-02-23</lastmod></url>
+  <url><loc>https://www.brothers-in-gaming.com/post/bokura</loc><lastmod>2025-05-27</lastmod></url>
+  <url><loc>https://www.brothers-in-gaming.com/post/lorelei</loc><lastmod>2025-03-10</lastmod></url>
+  <url><loc>https://www.brothers-in-gaming.com/post/balatro</loc><lastmod>2025-07-12</lastmod></url>
+  <url><loc>https://www.brothers-in-gaming.com/post/about-the-japanese-approach-and-what-the-west-can-learn-from-it</loc><lastmod>2024-07-10</lastmod></url>
+  <url><loc>https://www.brothers-in-gaming.com/post/interview-series-1-difficulty-vs-approachability</loc><lastmod>2024-03-13</lastmod></url>
+  <url><loc>https://www.brothers-in-gaming.com/post/synesthesia-in-video-games</loc><lastmod>2024-01-16</lastmod></url>
+  <url><loc>https://www.brothers-in-gaming.com/post/omori</loc><lastmod>2023-05-31</lastmod></url>
+  <url><loc>https://www.brothers-in-gaming.com/post/welcome-to-our-gaming-blog</loc><lastmod>2023-05-30</lastmod></url>
+</urlset>
