@@ -331,7 +331,7 @@ main, .content {
 .post-toc li { margin: 0 0 6px; }
 .post-toc a { color: var(--accent); }
 
-/* Newsletter embed stub (replaced by real email-service embed in Phase 3) */
+/* Newsletter signup (markup rendered by newsletter.js) */
 .newsletter {
   background: var(--bg-alt);
   border: 1px solid var(--border);
@@ -359,6 +359,34 @@ main, .content {
   border-radius: 6px;
 }
 .newsletter .btn:hover { background: var(--accent-hover); text-decoration: none; }
+
+.newsletter-form {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+}
+.newsletter-form input[type="email"] {
+  font-family: var(--font-body);
+  font-size: 15px;
+  color: var(--heading);
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 12px 14px;
+  /* Grow to fill the row, but wrap below the button on narrow screens. */
+  flex: 1 1 220px;
+  max-width: 320px;
+}
+.newsletter-form input[type="email"]:focus {
+  outline: 2px solid var(--accent);
+  outline-offset: 1px;
+  border-color: var(--accent);
+}
+.newsletter-form .btn {
+  border: 0;
+  cursor: pointer;
+}
 
 .post-back { margin-top: 40px; font-family: var(--font-head); font-size: 15px; }
 
