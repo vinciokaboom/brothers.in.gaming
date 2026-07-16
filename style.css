@@ -201,6 +201,60 @@ main, .content {
 .post-gallery img { width: 100%; height: 100%; object-fit: cover; border-radius: 6px; }
 @media (max-width: 560px) { .post-gallery { grid-template-columns: 1fr; } }
 
+/* Charts/diagrams side by side — contained, not cropped, captions kept */
+.post-gallery--charts { align-items: start; gap: 18px; }
+.post-gallery--charts img { height: auto; object-fit: contain; }
+.post-gallery--charts figcaption { margin-top: 8px; font-size: 12.5px; }
+
+/* Text beside media (image, GIF or video) */
+.media-split {
+  display: flex;
+  align-items: flex-start;
+  gap: clamp(16px, 3vw, 26px);
+  margin: 32px 0;
+}
+.media-split > .media-text { flex: 1 1 0; min-width: 0; }
+.media-split > .media-text > :first-child { margin-top: 0; }
+.media-split > .media-text > :last-child { margin-bottom: 0; }
+.media-split > figure,
+.media-split > .post-video { flex: 0 0 46%; margin: 0; }
+.media-split--left > figure,
+.media-split--left > .post-video { order: -1; }
+
+/* Portrait headshot beside a bio: name aligns to the top of the photo */
+.media-split--portrait > figure { flex: 0 0 190px; }
+.media-split--portrait > .media-text > p { margin-bottom: 8px; }
+
+@media (max-width: 620px) {
+  .media-split { display: block; }
+  .media-split > figure,
+  .media-split > .post-video { margin: 18px 0; }
+  .media-split--portrait > figure { max-width: 190px; }
+}
+
+/* LinkedIn post embeds */
+.post-linkedin {
+  margin: 28px auto 36px;
+  max-width: 560px;
+}
+.post-linkedin iframe {
+  display: block;
+  width: 100%;
+  height: 740px;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+}
+@media (max-width: 560px) { .post-linkedin iframe { height: 640px; } }
+
+/* A figure that shouldn't span the full column */
+.fig-narrow { max-width: 420px; margin-left: auto; margin-right: auto; }
+
+/* It Takes Two / Split Fiction mechanic categories */
+.cat-env { color: #2e7d32; }
+.cat-plat { color: #1565c0; }
+.cat-combat { color: #c62828; }
+.cat-puzzle { color: #e06a00; }
+
 /* Data tables */
 .post-table-wrap { margin: 32px 0; overflow-x: auto; }
 .post-table {
