@@ -8,17 +8,13 @@
   "assets": {
     "directory": ".",
     "binding": "ASSETS"
-  }
+  },
 
-  // Analytics is disabled for now so the site deploys with zero setup.
-  // To enable it later: create the D1 database (see ANALYTICS-SETUP.md),
-  // then uncomment the block below and paste in your real database_id.
-  //
-  // "d1_databases": [
-  //   {
-  //     "binding": "DB",
-  //     "database_name": "brothers_analytics",
-  //     "database_id": "REPLACE_WITH_DATABASE_ID"
-  //   }
-  // ]
+  "d1_databases": [
+    {
+      "binding": "DB",
+      "database_name": "brothers_analytics",
+      "database_id": "895c6ac5-a341-491a-9319-5e5ec17952ab"
+    }
+  ]
 }
