@@ -16,6 +16,14 @@ const BOT_RE =
 export default {
   async fetch(request, env, ctx) {
     const url = new URL(request.url);
+
+    // ── Canonical URL 301s (SEO: collapse duplicate URLs) ──
+    // Only for safe, cacheable reads — never redirect the analytics POST.
+    if (request.method === "GET" || request.method === "HEAD") {
+      const canonical = canonicalUrl(url);
+      if (canonical) return Response.redirect(canonical, 301);
+    }
+
     const path = url.pathname;
 
     if (path === "/collect" && request.method === "POST") {
@@ -35,6 +43,28 @@ export default {
     return env.ASSETS.fetch(request);
   },
 };
+
+/* ── Canonical URL ──────────────────────────
+   Returns a redirect target string if the request URL isn't canonical:
+     • apex/other hosts → www.brothers-in-gaming.com
+     • trailing slash stripped (except the site root)
+   Returns null when the URL is already canonical (no redirect).             */
+function canonicalUrl(url) {
+  let changed = false;
+
+  // apex → www (leave localhost / *.workers.dev / preview hosts untouched).
+  if (url.hostname === "brothers-in-gaming.com") {
+    url.hostname = "www.brothers-in-gaming.com";
+    changed = true;
+  }
+
+  if (url.pathname.length > 1 && url.pathname.endsWith("/")) {
+    url.pathname = url.pathname.replace(/\/+$/, "");
+    changed = true;
+  }
+
+  return changed ? url.toString() : null;
+}
 
 /* ── Collection ─────────────────────────── */
 

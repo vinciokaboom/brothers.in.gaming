@@ -70,7 +70,7 @@
     "publisher": {
       "@type": "Organization",
       "name": "Brothers in Gaming",
-      "url": "https://www.brothers-in-gaming.com"
+      "url": "https://www.brothers-in-gaming.com", "logo": { "@type": "ImageObject", "url": "https://www.brothers-in-gaming.com/Assets/logo.png" }
     }
   }
   </script>
@@ -89,6 +89,9 @@
     <article class="post">
       <div class="post-inner">
 
+        <section class="newsletter" aria-label="Newsletter signup"></section>
+
+
         <!-- Header (the Wix originals have no hero image or kicker above the title) -->
         <h1 class="post-title">{{TITLE}}</h1>
         <div class="post-byline">
@@ -100,15 +103,7 @@
         </div>
         <hr class="post-divider" />
 
-        <!-- Table of contents / jump links (for long posts like Balatro) -->
-        <nav class="post-toc" aria-label="Table of contents">
-          <h2>Contents</h2>
-          <ol>
-            <li><a href="#section-1">First section title</a></li>
-            <li><a href="#section-2">Second section title</a></li>
-            <li><a href="#appendix">Appendix</a></li>
-          </ol>
-        </nav>
+        <!-- Newsletter signup at the top of the article (rendered by newsletter.js) -->
 
         <!-- Body -->
         <div class="post-body">
@@ -116,6 +111,17 @@
           <p>Intro paragraph. Body copy is Raleway 18px. Inline
             <a href="https://example.com" target="_blank" rel="noopener">links</a>
             are brand blue and underlined.</p>
+
+          <!-- Table of contents / jump links (for long posts like Balatro).
+               Place it AFTER the introduction, right before the first section. -->
+          <nav class="post-toc" aria-label="Table of contents">
+            <h2>Jump to a chapter</h2>
+            <ol>
+              <li><a href="#section-1">First section title</a></li>
+              <li><a href="#section-2">Second section title</a></li>
+              <li><a href="#appendix">Appendix</a></li>
+            </ol>
+          </nav>
 
           <h2 id="section-1">First section title</h2>
           <p>Section paragraph.</p>
@@ -138,7 +144,8 @@
 
         </div>
 
-        <section id="newsletter" class="newsletter" aria-label="Newsletter signup"></section>
+        <!-- Recent posts (rendered by related.js — shows 3 other articles) -->
+        <section id="related-posts" class="related-posts" aria-label="Recent posts"></section>
 
         <p class="post-back"><a href="/">← Back to all posts</a></p>
 
@@ -151,6 +158,7 @@
   <script src="/nav.js"></script>
   <script src="/footer.js"></script>
   <script src="/newsletter.js"></script>
+  <script src="/related.js"></script>
   <script src="/analytics.js"></script>
 </body>
 </html>

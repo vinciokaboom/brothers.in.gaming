@@ -43,7 +43,7 @@
     "publisher":  {
                       "@type":  "Organization",
                       "name":  "Brothers in Gaming",
-                      "url":  "https://www.brothers-in-gaming.com"
+                      "url":  "https://www.brothers-in-gaming.com", "logo": { "@type": "ImageObject", "url": "https://www.brothers-in-gaming.com/Assets/logo.png" }
                   }
 }
   </script>
@@ -57,6 +57,9 @@
     <nav id="site-nav"></nav>
     <article class="post">
       <div class="post-inner">
+
+        <section class="newsletter" aria-label="Newsletter signup"></section>
+
         <h1 class="post-title">Interview Series #1: Difficulty vs Approachability</h1>
         <div class="post-byline">
           <span class="author">Brothers in Gaming</span>
@@ -66,17 +69,13 @@
           <span>15 min read</span>
         </div>
         <hr class="post-divider" />
-        <nav class="post-toc" aria-label="Table of contents">
-          <h2>Jump to a chapter</h2>
-          <ol><li><a href="#topic-1-difficulty-settings">Topic 1: Difficulty Settings</a></li><li><a href="#topic-2-automating-player-s-mechanics">Topic 2: Automating Player's Mechanics</a></li><li><a href="#topic-3-development-process-simplicity-vs-complexi">Topic 3: Development Process - Simplicity vs Complexity</a></li><li><a href="#bonus-topic-from-software-s-approach">Bonus Topic: From Software's Approach</a></li></ol>
-        </nav>
 
         <div class="post-body">
 
         <p><em>We interviewed four experts and asked them their takes on difficulty settings and gameplay approachability in recent video games.</em></p>
 
         <figure>
-          <img src="/Assets/interview-series-1-difficulty-vs-approachability/interview-series-1-difficulty-vs-approachability-01.jpg" alt="" loading="lazy" />
+          <img src="/Assets/interview-series-1-difficulty-vs-approachability/interview-series-1-difficulty-vs-approachability-01.jpg" alt="Illustration of a microphone wired to a game controller for the Difficulty vs Approachability interview" loading="lazy" />
         </figure>
 
         <p>Stay in the loop by signing up to receive notifications when we publish new articles (no spam, promised). The subscription form is at the top and the bottom of each page. </p>
@@ -107,6 +106,11 @@
         <p>The article is basically a collection of interviews around the aforementioned topics; we hope you enjoy the read!</p>
 
         <p>The interviews have been divided into three main sections, each corresponding to a high-level question, plus a final discussion about difficulty in soulslike games.</p>
+
+        <nav class="post-toc" aria-label="Table of contents">
+          <h2>Jump to a chapter</h2>
+          <ol><li><a href="#topic-1-difficulty-settings">Topic 1: Difficulty Settings</a></li><li><a href="#topic-2-automating-player-s-mechanics">Topic 2: Automating Player's Mechanics</a></li><li><a href="#topic-3-development-process-simplicity-vs-complexi">Topic 3: Development Process - Simplicity vs Complexity</a></li><li><a href="#bonus-topic-from-software-s-approach">Bonus Topic: From Software's Approach</a></li></ol>
+        </nav>
 
         <h2 id="the-interviewees">The interviewees</h2>
 
@@ -246,7 +250,7 @@
         <p>Now, I just read an article mentioning that FF7 Rebirth has added a Dynamic Difficulty option.. I might have to check that soon!</p>
 
         </div>
-        <section id="newsletter" class="newsletter" aria-label="Newsletter signup"></section>
+        <section id="related-posts" class="related-posts" aria-label="Recent posts"></section>
         <p class="post-back"><a href="/">&larr; Back to all posts</a></p>
       </div>
     </article>
@@ -255,6 +259,7 @@
   <script src="/nav.js"></script>
   <script src="/footer.js"></script>
   <script src="/newsletter.js"></script>
+  <script src="/related.js"></script>
   <script src="/analytics.js"></script>
 </body>
 </html>

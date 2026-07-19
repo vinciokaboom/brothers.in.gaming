@@ -58,7 +58,7 @@ img { max-width: 100%; height: auto; display: block; }
 }
 
 .nav-logo { display: inline-flex; align-items: center; }
-.nav-logo img { width: min(340px, 74vw); height: auto; display: block; }
+.nav-logo img { width: min(560px, 84vw); height: auto; display: block; }
 .nav-logo:hover { text-decoration: none; }
 
 .nav-links { display: flex; gap: 28px; list-style: none; margin: 0; padding: 0; }
@@ -348,6 +348,10 @@ main, .content {
   margin: 0 0 8px;
 }
 .newsletter p { color: var(--muted); font-size: 15px; margin: 0 0 16px; }
+
+/* Newsletter box at the very top of an article (before the title) —
+   little space above, a bit more breathing room below. */
+.post-inner > .newsletter { margin: 8px 0 44px; }
 .newsletter .btn {
   display: inline-block;
   font-family: var(--font-head);
@@ -387,6 +391,43 @@ main, .content {
   border: 0;
   cursor: pointer;
 }
+
+/* Embedded X / Twitter post */
+.post-tweet {
+  margin: 28px auto 36px;
+  max-width: 550px;
+}
+.post-tweet .twitter-tweet { margin-left: auto !important; margin-right: auto !important; }
+
+/* Related posts ("Recent posts") at the end of an article */
+.related-posts {
+  margin: 56px 0 8px;
+  padding-top: 32px;
+  border-top: 1px solid var(--border);
+}
+.related-head {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 12px;
+  margin: 0 0 20px;
+}
+.related-head h2 {
+  font-family: var(--font-head);
+  font-weight: 700;
+  font-size: 20px;
+  color: var(--heading);
+  margin: 0;
+}
+.related-all { font-family: var(--font-head); font-size: 14px; white-space: nowrap; }
+.related-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+}
+.related-grid .post-card-title { font-size: 16px; }
+.related-grid .post-card-body { padding: 14px 16px 16px; }
+@media (max-width: 640px) { .related-grid { grid-template-columns: 1fr; } }
 
 .post-back { margin-top: 40px; font-family: var(--font-head); font-size: 15px; }
 
